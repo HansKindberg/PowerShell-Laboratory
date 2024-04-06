@@ -25,9 +25,19 @@ At the moment we get the following warning:
 
 Haven't investigated it further.
 
-## 3 Deployment/installation
+## 3 Tests
 
-### 3.1 PowerShell-Gallery
+### 3.1 Links
+
+- Google: [icommandruntime powershell testing](https://www.google.com/search?q=icommandruntime+powershell+testing)
+- [Unit Testing Powershell Cmdlets in C#](https://fgimian.github.io/unit-testing-powershell-cmdlets-in-c-sharp/)
+- [Testing PowerShell cmdlets written in C#](https://pawelszczygielski.pl/2021/05/06/testing-powershell-cmdlets-written-in-c)
+- [PowerShell Cmdlet tests](https://github.com/deadlydog/PowerShellCmdletInCSharpExample)
+- [PowerShell testing in C#](https://gist.github.com/DigitalAXPP/935255e8ec984f3e24245386f491bcf1)
+
+## 4 Deployment/installation
+
+### 4.1 PowerShell-Gallery
 
 If you want to set up a local PowerShell-Gallery to test with:
 
@@ -57,7 +67,7 @@ More information:
 
 - [PowerShellGet](https://learn.microsoft.com/en-us/powershell/module/powershellget#powershellget)
 
-### 3.2 Install
+### 4.2 Install
 
 1. Download this repository and build.
 2. Run **Publish-Module.ps1** in the output-directory (bin\Release).
@@ -89,15 +99,12 @@ The files in [.powershell-repository](/.powershell-repository):
 
 give warnings but it seem to work anyhow.
 
-## 4 Links
+## 5 Links
 
-- [Testing PowerShell cmdlets written in C#](https://pawelszczygielski.pl/2021/05/06/testing-powershell-cmdlets-written-in-c)
-- [PowerShell Cmdlet tests](https://github.com/deadlydog/PowerShellCmdletInCSharpExample)
-- [PowerShell testing in C#](https://gist.github.com/DigitalAXPP/935255e8ec984f3e24245386f491bcf1)
 - [PowerShell Cmdlet Development in C# - The Ins and Outs](https://www.pluralsight.com/courses/powershell-cmdlet-development-csharp)
 - [Invoke-Command does not raise Verbose/Debug/Warning Stream events from Microsoft.PowerShell.SDK 7.x #14843](https://github.com/PowerShell/PowerShell/issues/14843)
 - [System.Management.Automation.Cmdlet](https://github.com/PowerShell/PowerShell/blob/master/src/System.Management.Automation/engine/cmdlet.cs)
 
-## 5 Temporary
+## 6 Temporary
 
 StrongName.Development.snk:PublicKey = 00240000048000009400000006020000002400005253413100040000010001009d1016571e63e70ba6bdedf4cc5bb13ac3776f9b319d05aba58eca8dbb082124a0b169ed593a445e5b98cc1c37b9015ebc4846051347575d1ea086f91f27e14f46a0a9acaa80244ff1091358d3db024af3079e168725eeaade7eb60363e98df661c13bcbcf32cab1efccf76918a8addd89708ce2718f6826f696592315280bdd
