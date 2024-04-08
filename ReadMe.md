@@ -30,9 +30,15 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
 - WarningAction (wa)
 - WarningVariable (wv)
 
+#### 1.3.1 Risk mitigation parameters
+
+- Confirm (cf)
+- WhatIf (wi)
+
 #### 1.3.1 Display all logs without prompts
 
 	Show-LaboratoryInformation `
+		-Confirm `
 		-Debug `
 		-ErrorAction Continue `
 		-InformationAction Continue `
@@ -43,6 +49,7 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
 or
 
 	Show-LoggingInformation `
+		-Confirm `
 		-Debug `
 		-ErrorAction Continue `
 		-InformationAction Continue `
