@@ -1,0 +1,1 @@
+The commands are as a layer for these classes. To examplify commands calling a NuGet-package for example.

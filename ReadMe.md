@@ -11,6 +11,48 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
     Show-LaboratoryInformation `
         -Value "Some value";
 
+### 1.2 Show-LoggingInformation
+
+    Show-LoggingInformation;
+
+### 1.3 Common parameters
+
+- Debug (db)
+- ErrorAction (ea)
+- ErrorVariable (ev)
+- InformationAction (infa)
+- InformationVariable (iv)
+- OutVariable (ov)
+- OutBuffer (ob)
+- PipelineVariable (pv)
+- ProgressAction (proga)
+- Verbose (vb)
+- WarningAction (wa)
+- WarningVariable (wv)
+
+#### 1.3.1 Display all logs without prompts
+
+	Show-LaboratoryInformation `
+		-Debug `
+		-ErrorAction Continue `
+		-InformationAction Continue `
+		-Verbose `
+		-WarningAction Continue `
+        -Value "Some value";
+
+or
+
+	Show-LoggingInformation `
+		-Debug `
+		-ErrorAction Continue `
+		-InformationAction Continue `
+		-Verbose `
+		-WarningAction Continue;
+
+#### 1.3.2 Links
+
+- [about_CommonParameters](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters)
+
 ## 2 Development
 
 ### 2.1 Signing
@@ -104,7 +146,3 @@ give warnings but it seem to work anyhow.
 - [PowerShell Cmdlet Development in C# - The Ins and Outs](https://www.pluralsight.com/courses/powershell-cmdlet-development-csharp)
 - [Invoke-Command does not raise Verbose/Debug/Warning Stream events from Microsoft.PowerShell.SDK 7.x #14843](https://github.com/PowerShell/PowerShell/issues/14843)
 - [System.Management.Automation.Cmdlet](https://github.com/PowerShell/PowerShell/blob/master/src/System.Management.Automation/engine/cmdlet.cs)
-
-## 6 Temporary
-
-StrongName.Development.snk:PublicKey = 00240000048000009400000006020000002400005253413100040000010001009d1016571e63e70ba6bdedf4cc5bb13ac3776f9b319d05aba58eca8dbb082124a0b169ed593a445e5b98cc1c37b9015ebc4846051347575d1ea086f91f27e14f46a0a9acaa80244ff1091358d3db024af3079e168725eeaade7eb60363e98df661c13bcbcf32cab1efccf76918a8addd89708ce2718f6826f696592315280bdd

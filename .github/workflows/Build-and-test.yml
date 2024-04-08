@@ -1,0 +1,51 @@
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+name: Build & test
+on:
+  pull_request:
+  push:
+    # branches:
+    # - Development
+    # - main
+  workflow_dispatch:
+jobs:
+  build_and_test:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+        - macOS-latest
+        - ubuntu-latest
+        - windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: |
+          3.1.x
+          5.0.x
+          6.0.x
+          7.0.x
+          8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: PowerShell 6 - netcoreapp3.1 - tests
+      run: dotnet test Tests/PowerShell-6-tests/PowerShell-6-tests.csproj --configuration Release --framework netcoreapp3.1 --no-build --verbosity normal
+    - name: PowerShell 6 - net5.0 - tests
+      run: dotnet test Tests/PowerShell-6-tests/PowerShell-6-tests.csproj --configuration Release --framework net5.0 --no-build --verbosity normal
+    - name: PowerShell 6 - net6.0 - tests
+      run: dotnet test Tests/PowerShell-6-tests/PowerShell-6-tests.csproj --configuration Release --framework net6.0 --no-build --verbosity normal
+    - name: PowerShell 6 - net7.0 - tests
+      run: dotnet test Tests/PowerShell-6-tests/PowerShell-6-tests.csproj --configuration Release --framework net7.0 --no-build --verbosity normal
+    - name: PowerShell 7 - net5.0 - tests
+      run: dotnet test Tests/PowerShell-7-tests/PowerShell-7-tests.csproj --configuration Release --framework net5.0 --no-build --verbosity normal
+    - name: PowerShell 7 - net6.0 - tests
+      run: dotnet test Tests/PowerShell-7-tests/PowerShell-7-tests.csproj --configuration Release --framework net6.0 --no-build --verbosity normal
+    - name: PowerShell 7 - net7.0 - tests
+      run: dotnet test Tests/PowerShell-7-tests/PowerShell-7-tests.csproj --configuration Release --framework net7.0 --no-build --verbosity normal
+    - name: PowerShell 7 - net8.0 - tests
+      run: dotnet test Tests/PowerShell-7-tests/PowerShell-7-tests.csproj --configuration Release --framework net8.0 --no-build --verbosity normal
