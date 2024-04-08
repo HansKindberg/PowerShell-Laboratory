@@ -15,7 +15,17 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
 
     Show-LoggingInformation;
 
-### 1.3 Common parameters
+### 1.3 Miscellaneous
+
+#### 1.3.1 Avoid prompts
+
+Run the following before you run any command above to avoid prompts:
+
+	$ConfirmPreference = "None"
+
+#### 1.3.2 Common parameters
+
+[about_CommonParameters](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters)
 
 - Debug (db)
 - ErrorAction (ea)
@@ -30,35 +40,10 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
 - WarningAction (wa)
 - WarningVariable (wv)
 
-#### 1.3.1 Risk mitigation parameters
+##### 1.3.2.1 Risk mitigation parameters
 
 - Confirm (cf)
 - WhatIf (wi)
-
-#### 1.3.1 Display all logs without prompts
-
-	Show-LaboratoryInformation `
-		-Confirm `
-		-Debug `
-		-ErrorAction Continue `
-		-InformationAction Continue `
-		-Verbose `
-		-WarningAction Continue `
-        -Value "Some value";
-
-or
-
-	Show-LoggingInformation `
-		-Confirm `
-		-Debug `
-		-ErrorAction Continue `
-		-InformationAction Continue `
-		-Verbose `
-		-WarningAction Continue;
-
-#### 1.3.2 Links
-
-- [about_CommonParameters](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters)
 
 ## 2 Development
 
