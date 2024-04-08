@@ -17,11 +17,18 @@ PowerShell commands for laboration. A portable module that can run on Linux, Mac
 
 ### 1.3 Miscellaneous
 
-#### 1.3.1 Avoid prompts
+#### 1.3.1 Display all information (debug & verbose)
 
-Run the following before you run any command above to avoid prompts:
+	Show-LaboratoryInformation `
+		-Debug `
+		-Verbose `
+        -Value "Some value";
 
-	$ConfirmPreference = "None"
+or
+
+	Show-LoggingInformation `
+		-Debug `
+		-Verbose;
 
 #### 1.3.2 Common parameters
 
