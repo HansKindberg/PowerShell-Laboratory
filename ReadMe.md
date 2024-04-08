@@ -119,6 +119,10 @@ Then you can try to install the module:
 
     Install-Module "HansKindberg.Laboratory";
 
+or (local)
+
+	Install-Module "HansKindberg.Laboratory" -Repository "PowerShell-Laboratory";
+
 or save it:
 
     Save-Module -Name "HansKindberg.Laboratory" -Path "C:\Data\Saved-PowerShell-Modules";
