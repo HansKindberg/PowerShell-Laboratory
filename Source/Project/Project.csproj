@@ -15,7 +15,7 @@
 		<PowerShellModuleGuid>9ae00090-fc3e-4956-a652-d036f9720ad0</PowerShellModuleGuid>
 		<PowerShellModuleName>HansKindberg.Laboratory</PowerShellModuleName>
 		<!-- The following tags are needed in the NuGet-package to get it working as a PS-Module-package. At least the first tag, PSModule, is required. -->
-		<PowerShellModulePackageRequiredTags>PSModule PSIncludes_Cmdlet PSCmdlet_Show-LaboratoryInformation PSCommand_Show-LaboratoryInformation</PowerShellModulePackageRequiredTags>
+		<PowerShellModulePackageRequiredTags>PSModule PSIncludes_Cmdlet PSCmdlet_Show-LaboratoryInformation PSCmdlet_Show-LoggingInformation PSCommand_Show-LaboratoryInformation PSCommand_Show-LoggingInformation</PowerShellModulePackageRequiredTags>
 		<RootNamespace>$(AssemblyName)</RootNamespace>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<VersionPrefix>0.0.1</VersionPrefix>
@@ -48,6 +48,7 @@
 			<_PowerShellModuleManifestLine Include="%09Author = %22$(Authors)%22" />
 			<_PowerShellModuleManifestLine Include="%09CmdletsToExport = @(" />
 			<_PowerShellModuleManifestLine Include="%09%09%22Show-LaboratoryInformation%22" />
+			<_PowerShellModuleManifestLine Include="%09%09%22Show-LoggingInformation%22" />
 			<_PowerShellModuleManifestLine Include="%09)" />
 			<_PowerShellModuleManifestLine Include="%09CompanyName = %22$(Company)%22" />
 			<_PowerShellModuleManifestLine Include="%09CompatiblePSEditions = %22Core%22, %22Desktop%22" />
